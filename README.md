@@ -1,5 +1,3 @@
-# ruby_app
-
 # Ruby webserver log parser
 
 This parser receives a log as argument
