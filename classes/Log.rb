@@ -51,6 +51,24 @@ class Log
         return self.sort_by_views(self.remove_duplicates)
     end
 
+    def print_report
+        puts ""
+        puts "Page view report for:"
+        self.source.each{|source| puts source}
+        puts ""
+        puts "Pages sorted by view count"
+        puts "--------------------------"
+        self.sort_by_views.each{|page, views| puts "#{page}: #{views} visits"}
+        puts ""
+        puts "Pages sorted by unique views"
+        puts "--------------------------"
+        self.sort_by_unique_views.each{|page, views| puts "#{page}: #{views} unique views"}
+    end
+
+
+    # Extra functionality
+
+
     def sort_by_user(content = @content)
         # returns a sorted hash of user by total number of page views
         user_list = {}
@@ -130,17 +148,4 @@ class Log
         end
     end
 
-    def print_report
-        puts ""
-        puts "Page view report for:"
-        self.source.each{|source| puts source}
-        puts ""
-        puts "Pages sorted by view count"
-        puts "--------------------------"
-        self.sort_by_views.each{|page, views| puts "#{page}: #{views} visits"}
-        puts ""
-        puts "Pages sorted by unique views"
-        puts "--------------------------"
-        self.sort_by_unique_views.each{|page, views| puts "#{page}: #{views} unique views"}
-    end
 end
