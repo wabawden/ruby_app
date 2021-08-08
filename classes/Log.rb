@@ -1,16 +1,8 @@
 class Log
+    attr_accessor :source, :content
     def initialize(source, content = [])
         @source = source
         @content = content
-    end
-
-    def source
-        # retains a list of the source files used
-        @source
-    end
-
-    def content
-        @content
     end
 
     def parse(params)
