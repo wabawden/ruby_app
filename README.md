@@ -34,7 +34,7 @@ The script raises exceptions with bespoke messages in the event of no file being
 
 ## Testing
 
-The script was continually tested using RSpec. Initially, various file errors were tested to help produce appropriate error handling functionality. Tests were then written for each Log method against a short test file.
+The script was continually tested using RSpec according to TDD principles. Initially, various file errors were tested to help produce appropriate error handling functionality. Tests were then written for each Log method against a short test file.
 
 ## Thank You
 
